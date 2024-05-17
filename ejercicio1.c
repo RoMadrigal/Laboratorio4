@@ -38,3 +38,37 @@ int busquedaBinaria(int valor) {
 }
 
 
+
+int busquedaBinariaRecursiva(int valor, int inicio, int fin) {
+    if (inicio > fin) {
+        return -1;
+    }
+
+
+    int medio = inicio + (fin - inicio) / 2;
+
+
+    if (arreglo[medio] == valor) {
+        return medio;
+    }
+    if (arreglo[medio] < valor) {
+        return busquedaBinariaRecursiva(valor, medio + 1, fin);
+    }
+    return busquedaBinariaRecursiva(valor, inicio, medio - 1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
