@@ -16,3 +16,25 @@ int busquedaLineal(int valor) {
 }
 
 
+int busquedaBinaria(int valor) {
+    int inicio = 0;
+    int fin = ARR_SIZE - 1;
+
+
+    while (inicio <= fin) {
+        int medio = inicio + (fin - inicio) / 2;
+
+
+        if (arreglo[medio] == valor) {
+            return medio;
+        }
+        if (arreglo[medio] < valor) {
+            inicio = medio + 1;
+        } else {
+            fin = medio - 1;
+        }
+    }
+    return -1;
+}
+
+
