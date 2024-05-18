@@ -9,7 +9,7 @@ int arreglo[] = {2, 4, 6, 23, 56, 79};
 int busquedaLineal(int valor) {
     for (int i = 0; i < ARR_SIZE; i++) {
         if (arreglo[i] == valor) {
-            return i;
+            return i+1;
         }
     }
     return -1;
@@ -25,7 +25,7 @@ int busquedaBinaria(int valor) {
 
 
         if (arreglo[medio] == valor) {
-            return medio;
+            return medio+1;
         }
         if (arreglo[medio] < valor) {
             inicio = medio + 1;
@@ -46,7 +46,7 @@ int busquedaBinariaRecursiva(int valor, int inicio, int fin) {
     int medio = inicio + (fin - inicio) / 2;
 
     if (arreglo[medio] == valor) {
-        return medio;
+        return medio+1;
     }
     if (arreglo[medio] < valor) {
         return busquedaBinariaRecursiva(valor, medio + 1, fin);
