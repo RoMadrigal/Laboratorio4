@@ -45,3 +45,25 @@ void encontrarMinMax(int *arreglo, int *minimo, int *maximo, int longitud) {
 }
 
 
+
+int main() {
+    int minimo = encontrarMin(arreglo, ARR_SIZE);
+    int maximo = encontrarMax(arreglo, ARR_SIZE);
+
+
+    printf("El valor minimo en el arreglo es: %d\n", minimo);
+    printf("El valor maximo en el arreglo es: %d\n", maximo);
+
+
+    int min, max;
+    encontrarMinMax(arreglo, &min, &max, ARR_SIZE);
+
+
+    printf("Utilizando punteros, el valor minimo en el arreglo es: %d\n", min);
+    printf("Utilizando punteros, el valor maximo en el arreglo es: %d\n", max);
+
+
+    return 0;
+}
+
+
